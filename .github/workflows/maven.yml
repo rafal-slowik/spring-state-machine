@@ -11,9 +11,7 @@ on:
     branches: ["master"]
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 17
@@ -27,4 +25,13 @@ jobs:
     - name: Conditional Step
       run: echo "Conditional action invoked"
       if: github.event_name != 'pull_request'
+      
+  deploy:
+    needs: build
+    name: deployment-job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy
+      run: echo "Deployed"
+
       
