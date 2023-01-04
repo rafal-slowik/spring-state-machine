@@ -1,3 +1,3 @@
 # spring-state-machine
 
-Spring State Machine
+## Spring State Machine
