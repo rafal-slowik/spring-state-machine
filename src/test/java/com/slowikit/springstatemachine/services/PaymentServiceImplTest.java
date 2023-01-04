@@ -73,7 +73,7 @@ class PaymentServiceImplTest {
         assertNotNull(paymentToVerify);
 
         assertTrue(
-                EnumSet.of(PaymentState.AUTH, PaymentState.AUTH_ERROR)
+                EnumSet.of(PaymentState.AUTH, PaymentState.AUTH)
                         .contains(paymentToVerify.getPaymentState()));
     }
 
